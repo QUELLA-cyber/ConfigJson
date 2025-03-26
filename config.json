@@ -1,0 +1,16 @@
+{
+  "GeneralSettings": {
+    "AppName": "MyApp",
+    "Version": "1.0",
+    "Locale": "en-US",
+    "Theme": "light",
+    "AutoUpdate": false
+  },
+  "UISettings": {
+    "Font": "Arial",
+    "FontSize": 14,
+    "BackgroundColor": "#FFFFFF",
+    "TextColor": "#000000",
+    "ShowSidebar": true
+  }
+}

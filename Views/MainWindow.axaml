@@ -1,0 +1,66 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:ConfigJson.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ConfigJson.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+         Title="Редактор настроек"
+        Width="450" Height="550">
+
+	<!-- Фон с нежным градиентом (пастельный розово-фиолетовый) -->
+	<Window.Background>
+		<LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+			<GradientStop Color="#EAC7FC" Offset="0"/>
+			<GradientStop Color="#C5A8F9" Offset="1"/>
+		</LinearGradientBrush>
+	</Window.Background>
+
+	<StackPanel Margin="20">
+		<TextBlock Text="Редактор настроек" FontSize="22" Foreground="White"
+                   HorizontalAlignment="Center" FontWeight="Bold" Margin="0,0,0,10"/>
+
+		<TextBlock Text="App Name:" Foreground="White"/>
+		<TextBox Name="AppNameTextBox" Margin="0,5" Background="#FFFFFF" CornerRadius="8"/>
+
+		<TextBlock Text="Version:" Foreground="White"/>
+		<TextBox Name="VersionTextBox" Margin="0,5" Background="#FFFFFF" CornerRadius="8"/>
+
+		<TextBlock Text="Locale:" Foreground="White"/>
+		<TextBox Name="LocaleTextBox" Margin="0,5" Background="#FFFFFF" CornerRadius="8"/>
+
+		<TextBlock Text="Theme:" Foreground="White"/>
+		<ComboBox Name="ThemeComboBox" Margin="0,5" Background="White">
+			<ComboBoxItem Content="Light"/>
+			<ComboBoxItem Content="Dark"/>
+		</ComboBox>
+
+		<CheckBox Name="AutoUpdateCheckBox" Margin="0,5" Foreground="White">Автообновление</CheckBox>
+
+		<TextBlock Text="Font:" Foreground="White"/>
+		<TextBox Name="FontTextBox" Margin="0,5" Background="#FFFFFF" CornerRadius="8"/>
+
+		<TextBlock Text="Font Size:" Foreground="White"/>
+		<TextBox Name="FontSizeTextBox" Margin="0,5" Background="#FFFFFF" CornerRadius="8"/>
+
+		<TextBlock Text="Background Color:" Foreground="White"/>
+		<TextBox Name="BackgroundColorTextBox" Margin="0,5" Background="#FFFFFF" CornerRadius="8"/>
+
+		<TextBlock Text="Text Color:" Foreground="White"/>
+		<TextBox Name="TextColorTextBox" Margin="0,5" Background="#FFFFFF" CornerRadius="8"/>
+
+		<CheckBox Name="ShowSidebarCheckBox" Margin="0,5" Foreground="White">Показать боковую панель</CheckBox>
+
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0" Spacing="10">
+			<Button Content="💾 Сохранить" Padding="10"
+                    Background="#FDD835" Foreground="Black" FontWeight="Bold"
+                    CornerRadius="12" x:Name="ApplyButton"/>
+
+			<Button Content="📖 Открыть JSON" Padding="10"
+                    Background="#2196F3" Foreground="White" FontWeight="Bold"
+                    CornerRadius="12" x:Name="OpenFileButton"/>
+		</StackPanel>
+	</StackPanel>
+</Window>
